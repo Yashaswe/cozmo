@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cozmo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <h2>Future Steps</h2>
+      <p>
+        It is possible that our approach would not be as successful in other
+        environments. We suggest tuning some of the various parameters including
+      </p>
+      <ul>
+        <li>the size of the pose population</li>
+        <li>the number of pictures taken to get the robot’s bearings</li>
+        <li>
+          the distance between pictures taken during the localization process
+        </li>
+        <li>
+          The process for selecting a position given updated information after
+          iterations of the localization process
+        </li>
+        <li>
+          How image differences are turned into relative probabilities: We used
+          an approach that multiplies the square differences of the reciprocals
+          by the exponential of the squared differences divided by the sensor
+          variance. Admittedly, we took this from the previous group without
+          fully thinking about it since it seemed to work for our purposes.
+          Maybe this could be made better by trying different approaches which
+          might make the robot’s beliefs converge faster.
+        </li>
+        <li>
+          In the sliding window process, the degree increments between each
+          offset image. Currently, we shift it by 10 pixels each time. The
+          endpoints of this process (-90px to 90px) could also be tuned to make
+          our approach more efficient.
+        </li>
+        <li>
+          Maybe our approach could be made faster by downscaling images. We did
+          not experiment with this, but presumably, it could speed up the
+          process if this was implemented. We do not know how this would affect
+          the efficacy of our method.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

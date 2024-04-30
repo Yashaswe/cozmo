@@ -1,0 +1,9 @@
+.menu {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.goals {
+    margin: auto 0;
+}
